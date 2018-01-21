@@ -1,7 +1,4 @@
-package main
-
-func main() {
-}
+package easy
 
 func removeElements(nums []int, val int) int {
 	var (

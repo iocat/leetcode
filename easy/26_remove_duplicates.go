@@ -1,12 +1,4 @@
-package main
-
-import "fmt"
-
-func main() {
-	var in = []int{0, 0, 1, 1, 1, 1, 2, 4, 4, 4, 5, 5, 9, 19}
-	newL := removeDuplicates(in)
-	fmt.Println("Remove Duplicate", in[:newL])
-}
+package easy
 
 func removeDuplicates(nums []int) int {
 	if len(nums) == 1 {
