@@ -16,11 +16,13 @@ func TestReverseInteger(t *testing.T) {
 		{11, 11},
 		{1234, 4321},
 		{10, 1},
+		{1534236469, 0},
+		{-2147483648, 0},
 	}
 
 	for _, c := range cases {
-		if res := reverseInteger(c.in); res != c.ou {
-			t.Errorf("reverseInteger(%d): expected %d, received %d", c.in, c.ou, res)
+		if res := reverse(c.in); res != c.ou {
+			t.Errorf("reverse(%d): expected %d, received %d", c.in, c.ou, res)
 		}
 	}
 }
