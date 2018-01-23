@@ -1,8 +1,6 @@
 package easy
 
-import (
-	"bytes"
-)
+import "bytes"
 
 func countAndSay(n int) string {
 	var (
@@ -17,7 +15,7 @@ func countAndSay(n int) string {
 		var (
 			newS  bytes.Buffer // the new string
 			head  = 0          // the parsing progress
-			count = 0          // count the occurence of the head
+			count = 0          // the number of the head's occurences
 		)
 
 		for head < len(res) {
@@ -28,7 +26,6 @@ func countAndSay(n int) string {
 			newS.WriteByte(res[head])
 			head = head + count // advance the head
 			count = 0           // reset the counter
-
 		}
 		res = newS.Bytes()
 		i++
