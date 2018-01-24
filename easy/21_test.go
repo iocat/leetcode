@@ -75,6 +75,11 @@ func TestMergeTwoLists(t *testing.T) {
 			[]int{0},
 			[]int{0},
 		},
+		{
+			[]int{0, 1, 2},
+			[]int{0, 1, 2},
+			[]int{0, 0, 1, 1, 2, 2},
+		},
 	}
 	for _, c := range cases {
 		var l1, l2 = makeListNode(c.l1), makeListNode(c.l2)
