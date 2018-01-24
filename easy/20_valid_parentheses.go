@@ -32,6 +32,7 @@ var parenMap = map[byte]byte{
 	')': '(',
 }
 
+// Running time is O(n)
 func isValid(s string) bool {
 	var stack parenStack
 	for _, b := range []byte(s) {
