@@ -2,6 +2,10 @@ package easy
 
 import "bytes"
 
+// Problem 14:
+// Write a function to find the longest common prefix string amongst an array
+// of strings.
+
 // This algorithm starts by finding the length of the shortest string (minLen).
 // Then, it examines all the character from index 0 -> minLen in each string looking for
 // a single differing character at the same index. For each same character in the string set,
