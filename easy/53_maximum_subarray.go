@@ -29,3 +29,23 @@ func maxSubArray(nums []int) int {
 	}
 	return totalSoFar
 }
+
+// DP solution
+func maxSubArray2(nums []int) int {
+	var max = func(x, y int) int {
+		if x > y {
+			return x
+		}
+		return y
+	}
+	if len(nums) == 0 {
+		return 0
+	}
+	var maxSofar = math.MinInt32
+	var maxEndHere int
+	for _, v := range nums {
+		maxEndHere = max(v, maxEndHere+v)
+		maxSofar = max(maxSofar, maxEndHere)
+	}
+	return maxSofar
+}
