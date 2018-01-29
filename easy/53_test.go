@@ -2,8 +2,11 @@ package easy
 
 import "testing"
 
-func TestMaxSubarray(t *testing.T) {
-	cases := []struct {
+func getCasesForMaxSubArray() []struct {
+	nums  []int
+	total int
+} {
+	return []struct {
 		nums  []int
 		total int
 	}{
@@ -14,9 +17,22 @@ func TestMaxSubarray(t *testing.T) {
 		{[]int{10, -100, 20, 10, -10}, 30},
 		{[]int{1, 2, -3, 3, 3, 3}, 9},
 	}
+}
+
+func TestMaxSubarray(t *testing.T) {
+	cases := getCasesForMaxSubArray()
 	for _, c := range cases {
 		if res := maxSubArray(c.nums); res != c.total {
 			t.Errorf("maxSubArray(%v) = %d, expected %d", c.nums, res, c.total)
+		}
+	}
+}
+
+func TestMaxSubarray2(t *testing.T) {
+	cases := getCasesForMaxSubArray()
+	for _, c := range cases {
+		if res := maxSubArray2(c.nums); res != c.total {
+			t.Errorf("maxSubArray2(%v) = %d, expected %d", c.nums, res, c.total)
 		}
 	}
 }

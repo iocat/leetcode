@@ -20,5 +20,8 @@ func TestLengthOfLongestSubstring(t *testing.T) {
 		if res := lengthOfLongestSubstring(c.s); res != c.l {
 			t.Errorf("lengthOfLongestSubstring(%s)=%d, expected %d", c.s, res, c.l)
 		}
+		if res := lengthOfLongestSubstring0(c.s); res != c.l {
+			t.Errorf("lengthOfLongestSubstring0(%s)=%d, expected %d", c.s, res, c.l)
+		}
 	}
 }
