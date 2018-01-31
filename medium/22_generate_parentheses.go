@@ -1,5 +1,6 @@
 package medium
 
+// Backtracking solution
 func generateParentheses(n int) []string {
 	if n == 0 {
 		return []string{}
