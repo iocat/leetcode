@@ -15,15 +15,15 @@ Return:
 	Note: All inputs will be in lower-case.
 */
 
-// The expected running time is O(N)
-// The worst space complexity is O(|N|), worst case happens O(N) when the
-// given input strings are not anagrams to one another
-
 // The idea is to create a character set for each output set of anagrams.
 // We use an array of size math.MaxUint8 to store the number of occurences of
 // each character, then we make that array a key of a set which maps to the
 // anagrams list. Whenever a string with a same set of character reoccurs,
 //  that string is appended to the result set
+//
+// 	The expected running time is O(N)
+// 	The worst space complexity is O(|N|), worst case happens O(N) when the
+// 	given input strings are not anagrams to one another
 func groupAnagrams(strs []string) [][]string {
 	var set = make(map[[math.MaxUint8]int][]string)
 	for _, str := range strs {
