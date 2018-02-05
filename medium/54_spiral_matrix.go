@@ -1,7 +1,7 @@
 package medium
 
 const (
-	Up = iota
+	up = iota
 	Down
 	Left
 	Right
@@ -15,7 +15,7 @@ func spiralOrderRecursive(matrix [][]int, dir int, ret *[]int) {
 	}
 
 	switch dir {
-	case Up:
+	case up:
 		for i := len(matrix) - 1; i >= 0; i-- {
 			row := &matrix[i]
 			*ret = append(*ret, (*row)[0])
@@ -41,7 +41,7 @@ func spiralOrderRecursive(matrix [][]int, dir int, ret *[]int) {
 		*lastRow = (*lastRow)[:len(*lastRow)-1]
 		if len(*lastRow) == 0 {
 			matrix = matrix[:len(matrix)-1] // remove the last row
-			spiralOrderRecursive(matrix, Up, ret)
+			spiralOrderRecursive(matrix, up, ret)
 		} else {
 			spiralOrderRecursive(matrix, dir, ret)
 		}
