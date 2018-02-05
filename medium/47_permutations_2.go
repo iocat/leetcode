@@ -16,7 +16,8 @@ For example,
 // each backtracking step needs a set to cache all the swapped value and make sure
 // not to swap that same value again to the index we're swapping against
 //
-// Note To Self: For backtracking, enunumarate the result sets using a recursion tree
+// Note To Self: For backtracking problem that requires generation of all results
+// , try to enunumarate the result sets using a recursion tree
 // Then figure out a way to eliminate all the duplicated results (in this case,
 // a hashmap is required to store the swapped value)
 func permuteUnique(nums []int) [][]int {
